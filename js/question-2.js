@@ -16,7 +16,9 @@ async function makeApiCall() {
 
         for (let i = 0; i <= jsonCount.lenght; ++i) {
 
-            document.write(results.array[i]);
+            //document.write(results.array[i]);
+            let name = document.createElement('.name');
+            let tag = document.createElement('.tags');
 
             if (i === 8) {
                 break;
@@ -24,9 +26,8 @@ async function makeApiCall() {
 
 
 
-            //   resultContainer.innerHTML += `<div class="json">${jsonCount[i].tags}</div>`;
-            //   resultContainer.innerHTML += `<div class="json">${jsonCount[i].name}</div>`;
-            //   resultContainer.innerHTML += `<div class="json">${jsonCount[i].ratings}</div>`;
+
+            resultContainer.innerHTML += `<div class="json">${jsonCount[i].ratings}</div>`;
         }
     }
     catch (error) {
