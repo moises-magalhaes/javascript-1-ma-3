@@ -8,16 +8,25 @@ async function makeApiCall() {
 
         const result = await response.json();
 
-        //console.log(result);
+        console.log(result);
 
 
-        const jsonCount = result.all;
+        const jsonCount = result.results;
         resultContainer.innerHTML = "";
 
-        for (let i = 0; i < jsonCount.lenght; ++i) {
+        for (let i = 0; i <= jsonCount.lenght; ++i) {
+
+            document.write(results.array[i]);
+
             if (i === 8) {
                 break;
             }
+
+
+
+            //   resultContainer.innerHTML += `<div class="json">${jsonCount[i].tags}</div>`;
+            //   resultContainer.innerHTML += `<div class="json">${jsonCount[i].name}</div>`;
+            //   resultContainer.innerHTML += `<div class="json">${jsonCount[i].ratings}</div>`;
         }
     }
     catch (error) {
