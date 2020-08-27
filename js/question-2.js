@@ -8,11 +8,21 @@ async function makeApiCall() {
 
         const result = await response.json();
 
-        console.log(result);
+        //console.log(result);
+
+
+        const jsonCount = result.all;
+        resultContainer.innerHTML = "";
+
+        for (let i = 0; i < jsonCount.lenght; ++i) {
+            if (i === 8) {
+                break;
+            }
+        }
     }
     catch (error) {
         console.log(error);
-        resultContainer.innerHTML = error
+        resultContainer.innerHTML = "An error has occurred when calling the API";
     }
 };
 
