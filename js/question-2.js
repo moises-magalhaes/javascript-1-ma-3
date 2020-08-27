@@ -12,20 +12,18 @@ async function makeApiCall() {
 
 
         const jsonCount = result.results;
+
         resultContainer.innerHTML = "";
 
-        for (let i = 0; i <= jsonCount.lenght; ++i) {
-
-            //document.write(results.array[i]);
-            let name = document.createElement('.name');
-            let tag = document.createElement('.tags');
-
+        for (let i = 0; i <= jsonCount.length; i++) {
+            console.log(jsonCount[i]);
             if (i === 8) {
                 break;
             }
 
+            resultContainer.innerHTML += `<div class="json">${jsonCount[i].name}</div>`;
 
-
+            resultContainer.innerHTML += `<div class="json">${jsonCount[i].tags}</div>`;
 
             resultContainer.innerHTML += `<div class="json">${jsonCount[i].ratings}</div>`;
         }
@@ -36,4 +34,4 @@ async function makeApiCall() {
     }
 };
 
-makeApiCall();
+makeApiCall(url);
