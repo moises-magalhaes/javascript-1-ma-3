@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: rgba(139, 141, 141, 0.2);
+    font-family: 'Dancing Script', cursive;
+    color: #3b850a;
+}
+
+.container {
+    max-width: 100%;
+    margin: 100px 50px;
+    font-family: 'Courier New', Courier, monospace;
+    color: cornsilk;
+}
+
+h1{
+font-family: 'Dancing Script';
+color: black;
+}
+
+.results {
+    margin: 2px;
+    padding: 1px;
+    max-width: 600px;
+    background: white;
+    border-radius: 5px;
+}
+
+.json-1{
+    margin: 5px;
+    background: rgb(80, 80, 114);
+    border-radius: 2%;
+
+}
+
+.json-2{
+    margin: 5px;
+    background: rgb(107, 114, 80);
+    border-radius: 2%;
+
+}
+
+.json-3{
+    margin: 5px;
+    background: rgb(180, 142, 37);
+    border-radius: 2%;
+
+}
+
+.success {
+    border: 1px solid green;
+    padding: 10px;
+    color: green;
+    background: black;
+}
+
+.error {
+    border: 1px solid red;
+    padding: 10px;
+    color: white;
+    background: rgba(49, 33, 54, 0.1);
+}
+
+.loading {
+    border: 25px solid #3b7046;
+    border-top: 25px solid rgb(145, 212, 168);
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-left: 50%;
+    animation: spin 6s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
